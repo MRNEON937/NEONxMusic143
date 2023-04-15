@@ -104,7 +104,7 @@ async def gen_thumb(videoid):
         return f"cache/{videoid}.png"
     except Exception:
         return YOUTUBE_IMG_URL
-t
+
 
 
 # Power By @Devil Server
