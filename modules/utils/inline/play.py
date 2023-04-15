@@ -1,526 +1,93 @@
-import math
+Skip to content
+BikashHalderNew
+/
+BgtMusic
+Public
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Security
+Insights
+BgtMusic/modules/utils/inline/play.py
+@BikashHalderNew
+BikashHalderNew Update play.py
+ 1 contributor
+386 lines (349 sloc)  12.1 KB
+# Power By @BikashHalder & @AdityaHalder 
+# Join @BikashGadgetsTech For More Update
+# Join @AdityaCheats For Hack
+# Join Our Chats @Bgt_Chat & @Adityadiscus 
 
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
-from AnonX import app
-
-import config
-from AnonX.utils.formatters import time_to_seconds
+import random
+from modules.config import SUPPORT_GROUP
+from modules.config import SUPPORT_CHANNEL
+from pyrogram.types import InlineKeyboardButton
 
 
-## After Edits with Timer Bar
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
-    played_sec = time_to_seconds(played)
-    duration_sec = time_to_seconds(dur)
-    percentage = (played_sec / duration_sec) * 100
-    anon = math.floor(percentage)
-    if 0 < anon <= 2:
-        bar = "⚡ѕтαяє∂ ρℓαყเɳɠ⚡"
-    elif 2 < anon < 3:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 3 <= anon < 4:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 4 <= anon < 5:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 6 <= anon < 7:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 7 <= anon < 8:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 9 <= anon < 10:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 11 <= anon < 12:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 12 <= anon < 13:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 13 < anon < 14:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 14 <= anon < 15:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 15 <= anon < 16:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 16 <= anon < 17:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 17 <= anon < 18:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 18 <= anon < 19:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 19 <= anon < 20:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 20 <= anon < 21:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 21 <= anon < 22:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 22 <= anon < 23:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 23 <= anon < 24:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 24 <= anon < 25:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 25 <= anon < 26:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 26 <= anon < 27:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 27 <= anon < 28:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 28 <= anon < 29:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 29 <= anon < 30:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 30 <= anon < 31:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 31 <= anon < 32:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 32 <= anon < 33:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 33 <= anon < 34:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 34 <= anon < 35:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 35 <= anon < 36:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 36 <= anon < 37:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 37 <= anon < 38:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 38 <= anon < 39:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 39 <= anon < 40:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 40 <= anon < 41:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 41 <= anon < 42:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 42 <= anon < 43:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 43 <= anon < 44:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 44 < anon < 45:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 45 <= anon < 46:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 46 <= anon < 47:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 47 <= anon < 48:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 48 <= anon < 49:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 49 <= anon < 50:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 50 <= anon < 51:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 51 <= anon < 52:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 52 <= anon < 53:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 53 <= anon < 54:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 54 <= anon < 55:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 55 <= anon < 56:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 56 <= anon < 57:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 57 <= anon < 58:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 58 <= anon < 59:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 59 <= anon < 60:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 60 <= anon < 61:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 61 <= anon < 62:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 62 <= anon < 63:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 63 <= anon < 64:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 64 <= anon < 65:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 65 <= anon < 66:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 66 <= anon < 67:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 67 <= anon < 68:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 68 <= anon < 69:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 69 <= anon < 70:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 70 <= anon < 71:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 71 <= anon < 72:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 72 <= anon < 73:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 73 <= anon < 74:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 74 <= anon < 75:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 75 <= anon < 76:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 76 < anon < 77:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 77 <= anon < 78:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 78 <= anon < 79:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 79 <= anon < 80:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 80 <= anon < 81:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 81 <= anon < 82:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 82 <= anon < 83:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 83 <= anon < 84:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 84 <= anon < 85:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 85 <= anon < 86:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 86 <= anon < 87:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 87 <= anon < 88:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 88 <= anon < 89:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 89 <= anon < 90:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 90 <= anon < 91:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 91 <= anon < 92:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 92 <= anon < 93:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 93 <= anon < 94:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 94 <= anon < 95:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 95 <= anon < 96:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 96 <= anon < 97:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 97 <= anon < 98:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 98 <= anon < 99:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    else:
-        bar = " 🍷ѕσ ¢ιтє ѕσηg🍷 "
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=f"{played} {bar} {dur}",
-                callback_data="GetTimer",
+                        "💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞", url=f"{SUPPORT_GROUP}"
             )
         ],
-        [
+        [           
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
         ],
-        [
+        [           
             InlineKeyboardButton(
-                text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}"
-            ),
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+            )
         ],
     ]
     return buttons
 
 
 def telegram_markup_timer(_, chat_id, played, dur):
-    played_sec = time_to_seconds(played)
-    duration_sec = time_to_seconds(dur)
-    percentage = (played_sec / duration_sec) * 100
-    anon = math.floor(percentage)
-    if 0 < anon <= 2:
-        bar = "⚡ѕтαяє∂ ρℓαყเɳɠ⚡"
-    elif 2 < anon < 3:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 3 <= anon < 4:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 4 <= anon < 5:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 6 <= anon < 7:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 7 <= anon < 8:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 9 <= anon < 10:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 11 <= anon < 12:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 12 <= anon < 13:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 13 < anon < 14:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 14 <= anon < 15:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 15 <= anon < 16:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 16 <= anon < 17:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 17 <= anon < 18:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 18 <= anon < 19:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 19 <= anon < 20:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 20 <= anon < 21:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 21 <= anon < 22:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 22 <= anon < 23:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 23 <= anon < 24:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 24 <= anon < 25:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 25 <= anon < 26:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 26 <= anon < 27:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 27 <= anon < 28:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 28 <= anon < 29:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 29 <= anon < 30:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 30 <= anon < 31:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 31 <= anon < 32:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 32 <= anon < 33:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 33 <= anon < 34:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 34 <= anon < 35:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 35 <= anon < 36:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 36 <= anon < 37:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 37 <= anon < 38:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 38 <= anon < 39:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 39 <= anon < 40:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 40 <= anon < 41:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 41 <= anon < 42:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻𝙾𝚈🥀 "
-    elif 42 <= anon < 43:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 43 <= anon < 44:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 44 < anon < 45:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 45 <= anon < 46:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 46 <= anon < 47:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 47 <= anon < 48:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 48 <= anon < 49:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 49 <= anon < 50:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 50 <= anon < 51:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 51 <= anon < 52:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 52 <= anon < 53:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 53 <= anon < 54:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 54 <= anon < 55:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 55 <= anon < 56:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 56 <= anon < 57:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 57 <= anon < 58:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 58 <= anon < 59:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 59 <= anon < 60:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 60 <= anon < 61:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 61 <= anon < 62:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 62 <= anon < 63:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 63 <= anon < 64:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 64 <= anon < 65:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 65 <= anon < 66:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 66 <= anon < 67:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 67 <= anon < 68:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 68 <= anon < 69:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 69 <= anon < 70:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 70 <= anon < 71:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 71 <= anon < 72:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 72 <= anon < 73:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 73 <= anon < 74:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 74 <= anon < 75:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 75 <= anon < 76:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 76 < anon < 77:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 77 <= anon < 78:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 78 <= anon < 79:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 79 <= anon < 80:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 80 <= anon < 81:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 81 <= anon < 82:
-        bar = " 🥀@𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 82 <= anon < 83:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 83 <= anon < 84:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 84 <= anon < 85:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 85 <= anon < 86:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 86 <= anon < 87:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 87 <= anon < 88:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 88 <= anon < 89:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 89 <= anon < 90:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 90 <= anon < 91:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 91 <= anon < 92:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 92 <= anon < 93:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 93 <= anon < 94:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 94 <= anon < 95:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 95 <= anon < 96:
-        bar = " 💥𝙽𝙴𝚆_𝙳𝙴𝚅𝙸𝙻_𝚆𝙾𝚁𝙻𝙳💥 "
-    elif 96 <= anon < 97:
-        bar = " 🔥𝙳𝙴𝚅𝙸𝙻_𝚂𝙴𝚁𝚅𝙴𝚁🔥 "
-    elif 97 <= anon < 98:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    elif 98 <= anon < 99:
-        bar = " 🥀𝚆𝙷𝙸𝚃𝙴_𝙳𝙴𝚅𝙸𝙻🥀 "
-    else:
-        bar = " 🍷ℓσνєℓу ѕσηg🍷 "
-
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=f"{played} {bar} {dur}",
-                callback_data="GetTimer",
+                        "💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞", url=f"{SUPPORT_GROUP}"
             )
         ],
-        [
+         [           
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
         ],
-        [
+        [           
             InlineKeyboardButton(
-                text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}"
-            ),
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+            )
         ],
     ]
     return buttons
+
+
+## Inline without Timer Bar
 
 
 def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
+                        "💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞", url=f"{SUPPORT_GROUP}"
+            )
         ],
-        [
+         [           
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
         ],
-        [
+        [           
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
             )
         ],
     ]
@@ -531,34 +98,17 @@ def telegram_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
+                        "💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 💞", url=f"{SUPPORT_GROUP}"
+            )
         ],
-        [
+         [           
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
         ],
-        [
+        [           
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
             )
         ],
     ]
@@ -572,34 +122,55 @@ def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["P_B_1"],
+                text="🔊 𝐏𝐥𝐚𝐲 𝐀𝐮𝐝𝐢𝐨",
                 callback_data=f"MusicStream {videoid}|{user_id}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
-                text=_["P_B_2"],
+                text="𝐏𝐥𝐚𝐲 𝐕𝐢𝐝𝐞𝐨 📺",
                 callback_data=f"MusicStream {videoid}|{user_id}|v|{channel}|{fplay}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["CLOSE_BUTTON"],
+                text="❌ 𝐂𝐥𝐨𝐬𝐞 ❌",
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
     ]
     return buttons
+
+
+def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="🔊 𝐏𝐥𝐚𝐲 𝐀𝐮𝐝𝐢𝐨",
+                callback_data=f"BikashPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+            ),
+            InlineKeyboardButton(
+                text="𝐏𝐥𝐚𝐲 𝐕𝐢𝐝𝐞𝐨 📺",
+                callback_data=f"BikashPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="❌ 𝐂𝐥𝐨𝐬𝐞 ❌",
+                callback_data=f"forceclose {videoid}|{user_id}",
+            )
+        ],
+        [           
+            InlineKeyboardButton(
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
+        ],
+        [           
+            InlineKeyboardButton(
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+            )
+        ],
+    ]
+    return buttons
+
 
 ## Live Stream Markup
 
@@ -608,58 +179,25 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["P_B_3"],
+                text="🖥️ 𝐒𝐭𝐚𝐫𝐭 𝐋𝐢𝐯𝐞 𝐒𝐭𝐫𝐞𝐚𝐦 🖥️",
                 callback_data=f"LiveStream {videoid}|{user_id}|{mode}|{channel}|{fplay}",
-            ),
+            )
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{config.SUPPORT_GROUP}",
-            ),
-            InlineKeyboardButton(
-                text=_["CLOSEMENU_BUTTON"],
+                text="❌ 𝐂𝐥𝐨𝐬𝐞 ❌",
                 callback_data=f"forceclose {videoid}|{user_id}",
-            ),
-        ]
-    ]
-    return buttons
-
-## wtf
-
-def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
+            )
         ],
-        [
+         [           
             InlineKeyboardButton(
-                text=_["P_B_1"],
-                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
-            ),
-            InlineKeyboardButton(
-                text=_["P_B_2"],
-                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
-            ),
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
         ],
-        [
+        [           
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{config.SUPPORT_GROUP}",
-            ),
-            InlineKeyboardButton(
-                text=_["CLOSE_BUTTON"],
-                callback_data=f"forceclose {videoid}|{user_id}",
-            ),
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+            )
         ],
     ]
     return buttons
@@ -675,95 +213,207 @@ def slider_markup(
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["P_B_1"],
+                text="🔊 𝐏𝐥𝐚𝐲 𝐀𝐮𝐝𝐢𝐨",
                 callback_data=f"MusicStream {videoid}|{user_id}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
-                text=_["P_B_2"],
+                text="𝐏𝐥𝐚𝐲 𝐕𝐢𝐝𝐞𝐨 📺",
                 callback_data=f"MusicStream {videoid}|{user_id}|v|{channel}|{fplay}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="◁",
+                text="❮",
                 callback_data=f"slider B|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
-                text=_["CLOSE_BUTTON"],
+                text="❌ 𝐂𝐥𝐨𝐬𝐞 ❌",
                 callback_data=f"forceclose {query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="▷",
+                text="❯",
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
         ],
-    ]
-    return buttons
-
-## Extra Shit
-
-close_keyboard = InlineKeyboardMarkup( 
-            [
-                [
-                    InlineKeyboardButton(
-                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
-                    )
-                ]    
-            ]
-        )
-
-
-## Queue Markup
-
-def queue_markup(_, videoid, chat_id):
-    buttons = [
-        [
+         [           
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
         ],
-        [
+        [           
             InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
-        ],
-        [  
-            InlineKeyboardButton(
-                text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
             )
         ],
     ]
     return buttons
+
+
+## Cpanel Markup
+
+
+def panel_markup_1(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="⏸ 𝐏𝐚𝐮𝐬𝐞", callback_data=f"ADMIN Pause|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="▶️ 𝐑𝐞𝐬𝐮𝐦𝐞",
+                callback_data=f"ADMIN Resume|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⏯ 𝐒𝐤𝐢𝐩", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="⏹ 𝐒𝐭𝐨𝐩", callback_data=f"ADMIN Stop|{chat_id}"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|0|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔙 𝐁𝐚𝐜𝐤 🔙",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
+            ),
+        ],
+         [           
+            InlineKeyboardButton(
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
+        ],
+        [           
+            InlineKeyboardButton(
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+            )
+        ],
+    ]
+    return buttons
+
+
+def panel_markup_2(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="🔇 𝐌𝐮𝐭𝐞", callback_data=f"ADMIN Mute|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="🔊 𝐔𝐧𝐦𝐮𝐭𝐞",
+                callback_data=f"ADMIN Unmute|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="🔀 𝐒𝐡𝐮𝐟𝐟𝐥𝐞",
+                callback_data=f"ADMIN Shuffle|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔁 𝐋𝐨𝐨𝐩", callback_data=f"ADMIN Loop|{chat_id}"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|1|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔙 𝐁𝐚𝐜𝐤 🔙",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|1|{videoid}|{chat_id}",
+            ),
+        ],
+         [           
+            InlineKeyboardButton(
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
+        ],
+        [           
+            InlineKeyboardButton(
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+            )
+        ],
+    ]
+    return buttons
+
+
+def panel_markup_3(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="⏮ 𝟏𝟎 𝐒𝐞𝐜𝐨𝐧𝐝𝐬",
+                callback_data=f"ADMIN 1|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="⏭ 𝟏𝟎 𝐒𝐞𝐜𝐨𝐧𝐝𝐬",
+                callback_data=f"ADMIN 2|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⏮ 𝟑𝟎 𝐒𝐞𝐜𝐨𝐧𝐝𝐬",
+                callback_data=f"ADMIN 3|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="⏭ 𝟑𝟎 𝐒𝐞𝐜𝐨𝐧𝐝𝐬",
+                callback_data=f"ADMIN 4|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|2|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="🔙 𝐁𝐚𝐜𝐤 🔙",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
+            ),
+        ],
+         [           
+            InlineKeyboardButton(
+                text="💥 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 💞", url=f"{SUPPORT_CHANNEL}"
+            )
+        ],
+        [           
+            InlineKeyboardButton(
+                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+            )
+        ],
+    ]
+    return buttons
+
+
+
+# Power By @BikashHalder & @AdityaHalder 
+# Join @BikashGadgetsTech For More Update
+# Join @AdityaCheats For Hack
+# Join Our Chats @Bgt_Chat & @Adityadiscus 
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+BgtMusic/play.py at bikash · BikashHalderNew/BgtMusic
