@@ -92,10 +92,10 @@ LOG_FILE_NAME = "adityalogs.txt"
 
 # All Images Of Bikash Aditya Player // @BIKASHHALDER @AdityaHalder
 START_IMG_URL = getenv("START_IMG_URL", f"https://graph.org/file/26baffe354ce445221904.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/f3bb39440f3b8d78e994e.jpg)
-PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://graph.org/file/9ae571399b6967f7496f7.jpg)
-GLOBAL_IMG_URL = getenv("GLOBAL_IMG_URL", "https://graph.org/file/5b7bb22631ad07268d5e7.jpg)
-STATS_IMG_URL = getenv("STATS_IMG_URL", "https://graph.org/file/665435e819d301a536f0e.jpg)
+PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/f3bb39440f3b8d78e994e.jpg")
+PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://graph.org/file/9ae571399b6967f7496f7.jpg")
+GLOBAL_IMG_URL = getenv("GLOBAL_IMG_URL", "https://graph.org/file/5b7bb22631ad07268d5e7.jpg")
+STATS_IMG_URL = getenv("STATS_IMG_URL", "https://graph.org/file/665435e819d301a536f0e.jpg")
 TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "resource/audio.jpeg")
 TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "resource/video.jpeg")
 STREAM_IMG_URL = getenv("STREAM_IMG_URL", "resource/stream.jpeg")
