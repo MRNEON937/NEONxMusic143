@@ -94,7 +94,7 @@ async def gen_thumb(videoid):
         draw.text((190, 550), f"Title: {title[:50]} ...", (255, 255, 255), font=font)
         draw.text((190, 590), f"Duration: {duration}", (255, 255, 255), font=font)
         draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
-        draw.text((190, 670), f"Powered By: Bikash & Aditya Halder (@BikashHalder @AdityaHalder)", (255, 255, 255), font=font)
+        draw.text((190, 670), f"Powered By: WHITE DEVIL  MISTY (@oficial_adarsh_op)", (255, 255, 255), font=font)
         try:
             os.remove(f"cache/thumb{videoid}.png")
             os.remove(f"cache/temp.png")
@@ -104,10 +104,9 @@ async def gen_thumb(videoid):
         return f"cache/{videoid}.png"
     except Exception:
         return YOUTUBE_IMG_URL
+t
 
 
-
-# Power By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Power By @Devil Server
+# Join @new_devil_world For chat
+# Join @about_devil30 For update
