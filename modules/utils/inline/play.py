@@ -1,4 +1,3 @@
-
 # Power By @BikashHalder & @AdityaHalder 
 # Join @BikashGadgetsTech For More Update
 # Join @AdityaCheats For Hack
@@ -385,18 +384,4 @@ def panel_markup_3(_, videoid, chat_id):
 # Join @BikashGadgetsTech For More Update
 # Join @AdityaCheats For Hack
 # Join Our Chats @Bgt_Chat & @Adityadiscus 
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-BgtMusic/play.py at bikash · BikashHalderNew/BgtMusic
+
