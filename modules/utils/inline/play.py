@@ -24,7 +24,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
