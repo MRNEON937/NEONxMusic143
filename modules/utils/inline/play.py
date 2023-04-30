@@ -45,7 +45,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -69,7 +69,7 @@ def stream_markup(_, videoid, chat_id):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -90,7 +90,7 @@ def telegram_markup(_, chat_id):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -147,7 +147,7 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -178,7 +178,7 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -224,7 +224,7 @@ def slider_markup(
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -274,7 +274,7 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -322,7 +322,7 @@ def panel_markup_2(_, videoid, chat_id):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
@@ -372,7 +372,7 @@ def panel_markup_3(_, videoid, chat_id):
         ],
         [           
             InlineKeyboardButton(
-                text="📱 𝐌𝐚𝐧𝐞𝐠𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 📱", url=f"https://t.me/mahakali_manegment_bot"
+                text="📱 ᴏᴡɴᴇʀ 📱", url=f"https://t.me/MrKhunii"
             )
         ],
     ]
