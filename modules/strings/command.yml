@@ -1,7 +1,7 @@
-# Powered By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Powered By @MrKhunii 
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever
 
 
 # Commands in Every Language
@@ -17,7 +17,7 @@ STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs"]
 
 # Play Commands
-PLAY_COMMAND : ["play", "bgt", "/bgt", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"]
+PLAY_COMMAND : ["play", "khuni", "villan", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
 STREAM_COMMAND : ["stream", "cstream", "streamforce"]
@@ -37,11 +37,11 @@ LYRICS_COMMAND : ["lyrics"]
 AUTH_COMMAND : ["auth"]
 UNAUTH_COMMAND : ["unauth"]
 AUTHUSERS_COMMAND : ["authusers"]
-PAUSE_COMMAND : ["pause", "cpause"]
-RESUME_COMMAND : ["resume", "cresume"]
+PAUSE_COMMAND : ["pause", "ruk", "cpause"]
+RESUME_COMMAND : ["resume", "chalu", "cresume"]
 MUTE_COMMAND : ["mute", "cmute"]
 UNMUTE_COMMAND : ["unmute", "cunmute"]
-STOP_COMMAND : ["stop", "end", "x", "cstop", "cend"]
+STOP_COMMAND : ["stop", "end", "band", "cstop", "cend"]
 SKIP_COMMAND : ["skip", "cskip"]
 SHUFFLE_COMMAND : ["shuffle", "cshuffle"]
 LOOP_COMMAND : ["loop", "cloop"]
@@ -51,9 +51,9 @@ RESTART_COMMAND : ["restart", ".reset", "reboot"]
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND : ["addsudo", "adbk", "adbgt"]
-DELSUDO_COMMAND : ["delsudo", "delbk", "delbgt"]
-SUDOUSERS_COMMAND : ["sudolist", "bklist", "bgtlist"]
+ADDSUDO_COMMAND : ["addsudo", "adkhuni", "avillan"]
+DELSUDO_COMMAND : ["delsudo", "delkhuni", "delvillan"]
+SUDOUSERS_COMMAND : ["sudolist", "khunilist", "villanlist"]
 
 #Broadcast 
 BROADCAST_COMMAND : ["broadcast"]
@@ -109,7 +109,7 @@ GBANNED_COMMAND : ["gbannedusers"]
 
 
 
-# Powered By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Powered By @MrKhunii
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever
