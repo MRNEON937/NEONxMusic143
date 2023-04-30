@@ -1,7 +1,7 @@
 {
-    "name": "Bgt Music Bot",
+    "name": "Khuni X Music",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/c8135608b7f9f77541a82.jpg",
+    "logo": "https://graph.org/file/a1485c66e31dfeb995bf6.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -34,12 +34,12 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters",
-        "value": "Bgt Music",
+        "value": "Khuni X Music",
         "required": true
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "1439222689",
+        "value": "5230338052",
         "required": true
       },
       "STRING_SESSION": {
