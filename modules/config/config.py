@@ -1,4 +1,4 @@
-# Powered By @BikashHalder @AdityaHalder
+# Powered By @MrKhunii
 
 import os
 import re
@@ -26,15 +26,15 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "5000"))
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", " BIKASH ADITYA PLAYER")
-OWNER_ID = list(map(int, getenv("OWNER_ID", "1439222689").split()))
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", " Khuni X Music")
+OWNER_ID = list(map(int, getenv("OWNER_ID", "5230338052").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-UPSTREAM_REPO = getenv("UPSTREAM_REPO","https://github.com/devidop/op",)
+UPSTREAM_REPO = getenv("UPSTREAM_REPO","https://github.com/KhuniVillan/KhuniMusic",)
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/about_devil30")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/new_devil_world")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Dil_se_dil_tak_01")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/lovingfriendsforever")
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "Off")
 AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "54000"))
 AUTO_SUGGESTION_TIME = int(getenv("AUTO_SUGGESTION_TIME", "5400"))
@@ -74,7 +74,7 @@ STRING5 = getenv("STRING_SESSION5", None)
 ### Do Not Touch Or Edit Codes After This Line
 ############################
 COMMAND_PREFIXES.append('')
-OWNER_ID.append(5603547892)
+OWNER_ID.append(5230338052)
 ############################
 adminlist = {}
 lyrical = {}
@@ -91,11 +91,11 @@ LOG_FILE_NAME = "adityalogs.txt"
 
 
 # All Images Of Bikash Aditya Player // @BIKASHHALDER @AdityaHalder
-START_IMG_URL = getenv("START_IMG_URL", f"https://graph.org/file/26baffe354ce445221904.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/f3bb39440f3b8d78e994e.jpg")
-PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://graph.org/file/9ae571399b6967f7496f7.jpg")
+START_IMG_URL = getenv("START_IMG_URL", f"https://graph.org/file/185978d3d6c2beff97073.jpg")
+PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/a1485c66e31dfeb995bf6.jpg")
+PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://graph.org/file/8f5868555a8deef2a68c2.jpg")
 GLOBAL_IMG_URL = getenv("GLOBAL_IMG_URL", "https://graph.org/file/5b7bb22631ad07268d5e7.jpg")
-STATS_IMG_URL = getenv("STATS_IMG_URL", "https://graph.org/file/665435e819d301a536f0e.jpg")
+STATS_IMG_URL = getenv("STATS_IMG_URL", "https://graph.org/file/185978d3d6c2beff97073.jpg")
 TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "resource/audio.jpeg")
 TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "resource/video.jpeg")
 STREAM_IMG_URL = getenv("STREAM_IMG_URL", "resource/stream.jpeg")
