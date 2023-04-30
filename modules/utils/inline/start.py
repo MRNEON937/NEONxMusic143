@@ -1,7 +1,7 @@
-# Power By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Power By @MrKhunii
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever
 
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
@@ -21,11 +21,11 @@ def start_pannel(_):
         [
             InlineKeyboardButton(
                 text="📡 𝐔𝐩𝐝𝐚𝐭𝐞𝐬",
-                url=f"https://t.me/about_devil30",
+                url=f"https://t.me/Khuni_X_Villan_Server",
             ),
             InlineKeyboardButton(
                 text="𝐒𝐮𝐩𝐩𝐨𝐫𝐭 💬",
-                url=f"https://t.me/new_devil_world",
+                url=f"https://t.me/lovingfriendsforever",
             )
         ],
         [
@@ -48,10 +48,10 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         [
             InlineKeyboardButton(
                 text="📡 𝐔𝐩𝐝𝐚𝐭𝐞𝐬",
-                url=f"https://t.me/about_devill30"),
+                url=f"https://t.me/Khuni_X_Villan_Server"),
             InlineKeyboardButton(
                 text="𝐒𝐮𝐩𝐩𝐨𝐫𝐭 💬",
-                url=f"https://t.me/new_devil_world")
+                url=f"https://t.me/lovingfriendsforever")
         ],
         [
             InlineKeyboardButton(
@@ -65,7 +65,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
 
 
 
-# Power By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Power By @MrKhunii
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever
