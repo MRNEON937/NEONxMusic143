@@ -1,7 +1,7 @@
-# Powered By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Powered By @MrKhunii 
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever
 
 HELP_1 = """✅**<u>Admin Commands:</u>**
 
@@ -37,17 +37,17 @@ Auth Users can use admin commands without admin rights in your chat.
 
 HELP_2 = """✅<u>**Play Commands:**</u>
 
-Available Commands = play, bgt, vplay , cplay
+Available Commands = play, khuni, vplay , cplay
 
-ForcePlay Commands = playforce , bgtforce vplayforce , cplayforce
+ForcePlay Commands = playforce , khuniforce vplayforce , cplayforce
 
 **c** stands for channel play.
 **v** stands for video play.
 **force** stands for force play.
 
-/play or /bgt or /vplay or /cplay  - Bot will start playing your given query on voice chat or Stream live links on voice chats.
+/play or /khuni or /vplay or /cplay  - Bot will start playing your given query on voice chat or Stream live links on voice chats.
 
-/playforce or /bgtforce or /vplayforce or /cplayforce -  **Force Play** stops the current playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.
+/playforce or /khuniforce or /vplayforce or /cplayforce -  **Force Play** stops the current playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.
 
 /channelplay [Chat username or id] or [Disable] - Connect channel to a group and stream music on channel's voice chat from your group.
 
@@ -62,7 +62,7 @@ HELP_3 = """✅<u>**Bot Commands:**</u>
 
 /stats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
 
-/sudolist - Check Sudo Users of Bikash Aditya Player Bot
+/sudolist - Check Sudo Users of Khuni X Music Bot
 
 /lyrics [Music Name] - Searches Lyrics for the particular Music on web.
 
@@ -171,7 +171,7 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 """
 
 
-# Powered By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Powered By @MrKhunii
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever 
