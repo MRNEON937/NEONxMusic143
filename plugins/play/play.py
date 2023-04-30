@@ -29,7 +29,7 @@ from modules.utils.stream.stream import stream
 
 
 @app.on_message(
-    command(["play", "bgt", "vplay", "cplay", "cvplay", "playforce", "bgtforce", "vplayforce", "cplayforce", "cvplayforce"])
+    command(["play", "khuni", "vplay", "cplay", "cvplay", "playforce", "bgtforce", "vplayforce", "cplayforce", "cvplayforce"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
