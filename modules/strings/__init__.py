@@ -1,7 +1,7 @@
-# Power By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Power By @MrKhunii 
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever
 
 import os
 from typing import List
@@ -46,7 +46,7 @@ for filename in os.listdir(r"./modules/strings/langs/"):
 
 
 
-# Power By @BikashHalder & @AdityaHalder 
-# Join @BikashGadgetsTech For More Update
-# Join @AdityaCheats For Hack
-# Join Our Chats @Bgt_Chat & @Adityadiscus 
+# Power By @MrKhunii
+# Join @Khuni_X_Villan_Server For More Update
+# Join @Dil_se_dil_tak_01 For Sayri
+# Join Our Chats @lovingfriendsforever
