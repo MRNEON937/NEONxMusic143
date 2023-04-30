@@ -1,4 +1,4 @@
-# Powered By @BikashHalder @AdityaHalder
+# Powered By @MrKhunii
 
 import sys
 from modules import config
@@ -10,7 +10,7 @@ class AdityaBot(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot")
         super().__init__(
-            "BGTMUSICBOT",
+            "Khuni X Music",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
